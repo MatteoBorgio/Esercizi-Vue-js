@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Immagine disattivata</title>
+    <style>
+        .disabled {
+            opacity: 0.3;
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <img :src = "src" alt="Vue.js" :class="{disabled: immagineDisabilitata}">
+        <button v-on:click="immagineDisabilitata = !immagineDisabilitata">Abilita/Disabilita immagine</button>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>

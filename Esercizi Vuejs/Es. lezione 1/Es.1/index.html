@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Profilo utente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        #app {
+            padding: 20px;
+            font-size: 1.1em;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        Il mio nome è {{ nome }} <br>
+        Il mio cognome è {{ cognome }} <br>
+        La mia città è {{ città }}
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>
