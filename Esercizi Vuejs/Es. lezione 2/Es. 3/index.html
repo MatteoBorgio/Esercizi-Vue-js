@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semaforo</title>
+    <title>Classifica</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,8 +13,8 @@
         }
 
         #app {
-            max-width: 300px;
-            margin: 100px auto;
+            max-width: 400px;
+            margin: 80px auto;
             background: #fff;
             padding: 30px;
             border-radius: 8px;
@@ -22,22 +22,29 @@
             text-align: center;
         }
 
-        p {
-            font-size: 1.5em;
-            color: black;
-            padding: 20px 0;
-            border-radius: 6px;
-            margin: 20px 0;
-            font-weight: bold;
-            letter-spacing: 1px;
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        li {
+            font-size: 1.2em;
+            color: #444;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <p v-if="coloreSemaforo === 'rosso'" style="background-color: red;">Stop</p>
-        <p v-else-if="coloreSemaforo === 'giallo'" style="background-color: yellow;">Attenzione</p>
-        <p v-else-if="coloreSemaforo === 'verde'" style="background-color: green;">Vai</p>
+        <h1>Classifica</h1>
+        <ol>
+            <li v-for="team in teamArray">{{team}}</li>
+        </ol>
     </div>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="app.js"></script>

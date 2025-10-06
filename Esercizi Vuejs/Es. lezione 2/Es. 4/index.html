@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo di prodotti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        th, td {
+            padding: 12px 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1976d2;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e3f2fd;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Catalogo di prodotti</h1>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Prezzo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="prodotto in arrayProdotti" :key="prodotto.id">
+                    <td>{{ prodotto.id }}</td>
+                    <td>{{ prodotto.nome }}</td>
+                    <td>{{ prodotto.prezzo }} €</td>
+                </tr>
+            </tbody>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>
