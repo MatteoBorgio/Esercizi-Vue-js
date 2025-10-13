@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di Registrazione Semplice</title>
+    <style>
+        body{
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: #f5f7fa;
+            color: #1f2937;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        #app{
+            background: #ffffff;
+            width: 100%;
+            max-width: 520px;
+            padding: 20px 24px;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+        }
+
+        h1{
+            font-size: 1.25rem;
+            margin: 0 0 14px 0;
+            color: #0f172a;
+        }
+
+        input[type="text"]{
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-sizing: border-box;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        input[type="radio"]{
+            margin-right: 6px;
+            transform: translateY(1px);
+        }
+
+        button{
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            margin-top: 16px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.15s ease;
+        }
+
+        button:hover{
+            background: #1e40af;
+        }
+
+        #app > p:last-of-type{
+            margin-top: 16px;
+            background: #eef2ff;
+            padding: 12px;
+            border-left: 4px solid #6366f1;
+            border-radius: 6px;
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Form di Registrazione Semplice</h1>
+        <form @submit.prevent="riepilogo">
+            <input type="text" v-model="nome" placeholder="Nome" required>
+            <br>
+            <p>Specifica il tuo sesso: </p>
+            <input type="radio" name="sesso" v-model="sesso" value="Maschio" required> Maschio
+            <input type="radio" name="sesso" v-model="sesso" value="Femmina" required> Femmina
+            <br>
+            <p>Specifica la tua nazione: </p>
+            <input type="radio" name="nazione" v-model="nazione" value="Italia" required> Italia
+            <input type="radio" name="nazione" v-model="nazione" value="Francia" required> Francia
+            <input type="radio" name="nazione" v-model="nazione" value="Germania" required> Germania
+            <br>
+            <button type="submit">Invia</button>
+        </form>
+        <p v-if="riepilogoTesto">{{ riepilogoTesto }}</p>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>   
+</body>
+
+</html>
