@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validatione Input</title>
+    <style>
+      html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f8fafc;color:#0b1220}
+      body{display:flex;align-items:center;justify-content:center;padding:20px}
+      #app{width:320px;background:#fff;padding:12px;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.06);text-align:left}
+      h1{margin:0 0 8px;text-align:center}
+      input[type="text"]{width:100%;padding:8px;border:1px solid #e6eef8;border-radius:6px;font-size:0.95rem}
+      input[type="text"]:focus{outline:none;border-color:#4f9cff;box-shadow:0 0 0 6px rgba(79,156,255,0.04)}
+      p{margin:6px 0 0;font-size:0.9rem}
+      .errore{color:#c00}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Valida input</h1>
+        <input type="text" v-model="input" placeholder="Inserisci il tuo username">
+        <p v-if="errore" class="errore">{{ errore }}</p>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>

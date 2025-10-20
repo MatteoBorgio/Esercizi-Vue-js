@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Controllo maggiore età</title>
+  <style>
+    html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial}
+    body{display:flex;align-items:center;justify-content:center;background:#f7f9fc}
+    #app{width:320px;padding:16px;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.06);text-align:center}
+    input{width:100%;padding:8px;border:1px solid #e6eef8;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>Verifica la tua età</h1>
+    <input type="number" v-model="età" placeholder="Inserisci la tua età">
+    <p v-if="età !== null">{{ messaggioEtà }}</p>
+  </div>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="app.js"></script>
+</body>
+</html>
