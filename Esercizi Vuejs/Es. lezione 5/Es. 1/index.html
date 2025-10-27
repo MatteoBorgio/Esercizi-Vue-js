@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stato del messaggio</title>
+  <style>
+    html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f9fafb;color:#0b1220}
+    body{display:flex;align-items:center;justify-content:center;padding:20px}
+    #app{width:320px;max-width:95%}
+    #app > div{padding:10px;border-radius:6px;border:1px solid #eef3fb;margin-bottom:10px}
+    .successo{background:#16a34a;color:#fff}
+    .errore{background:#dc2626;color:#fff}
+    button{padding:8px 10px;border-radius:6px;border:0;background:#0b1220;color:#fff;cursor:pointer;margin-right:8px}
+    button:last-child{margin-right:0}
+  </style>
+</head>
+<body>
+    <h1>Stato del messaggio</h1>
+    <div id="app">
+        <div :class="{ 'successo': successo, 'errore': errore }">
+            <p>Messaggio visualizzato</p>
+        </div>
+        <button @click="messaggio_successo()">Imposta come successo</button>
+        <button @click="messaggio_errore()">Imposta come errore</button>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>

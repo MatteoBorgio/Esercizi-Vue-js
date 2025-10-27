@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar personalizzabile</title>
+    <style>
+      html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f7fafc;color:#0b1220}
+      body{display:flex;align-items:center;justify-content:center;padding:24px}
+      #app{width:320px;max-width:95%;text-align:center}
+      h1{font-size:1rem;margin:0 0 12px}
+      input[type="number"], input[type="color"]{
+        width:100%;
+        box-sizing:border-box;
+        margin:6px 0;
+        padding:8px;
+        border:1px solid #e6eef8;
+        border-radius:6px;
+        background:#fff;
+        font-size:0.95rem;
+      }
+      .avatar{
+        margin-top:12px;
+        width:100px;
+        height:100px;
+        background:#eee;
+        border-radius:8px;
+        display:inline-block;
+        transition:all .18s ease;
+        box-shadow:0 4px 10px rgba(2,6,23,0.06);
+      }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Avatar personalizzabile</h1>
+        <input type="number" v-model.number="width" placeholder="Inserisci la dimensione in px">
+        <input type="number" v-model.number="height" placeholder="Inserisci l'altezza in px">
+        <input type="color" v-model="bgColor" placeholder="Scegli il colore di sfondo">
+        <div class="avatar" :style="{ width: (width || 100) + 'px', height: (height || 100) + 'px', backgroundColor: bgColor }"></div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>

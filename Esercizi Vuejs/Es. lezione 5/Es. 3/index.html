@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saluto personale</title>
+    <style>
+      html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#f7fafc;color:#0b1220}
+      body{display:flex;align-items:center;justify-content:center;padding:20px}
+      #app{width:320px;background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,0.06);text-align:center}
+      h1{font-size:1rem;margin:0 0 12px}
+      saluto-utente{display:block;padding:10px;border:1px solid #eef3fb;border-radius:6px;background:#fbfdff;margin-top:8px}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Saluto personale</h1>
+        <saluto-utente></saluto-utente>
+        <saluto-utente></saluto-utente>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>
