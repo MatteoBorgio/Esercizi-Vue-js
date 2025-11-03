@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Box</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f5f7fb;
+        }
+        #app {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .success {
+            padding: 15px;
+            border: 1px solid #4CAF50;
+            background-color: #DFF2BF;
+            color: #4F8A10;
+            border-radius: 5px;
+        }
+        .error {
+            padding: 15px;
+            border: 1px solid #F44336;
+            background-color: #FFBABA;
+            color: #D8000C;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Alert Box</h1>
+        <alert-box :tipo="tipo" :messaggio="messaggio"></alert-box>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
